@@ -3,18 +3,18 @@ package abstractfactory;
 public class Worker {
 
     private Contract contract;
-    private Instructions instructions;
+    private Wage wage;
 
-    public Worker (Abstractfactory factory) {
+    public Worker (AbstractFactory factory) {
         this.contract = factory.createContract();
-        this.instructions = factory.createInstructions();
+        this.wage = factory.createWage();
     }
 
     public String getContract(){
         return this.contract.get();
     }
 
-    public String getInsctructions() {
-        return this.instructions.get();
+    public String getWage() {
+        return this.wage.get();
     }
 }
